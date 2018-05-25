@@ -11,10 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-import com.example.hotumit.monthlyincome.Utility.RecyclerItemClickListener;
+import com.example.hotumit.monthlyincome.utility.RecyclerItemClickListener;
 import com.example.hotumit.monthlyincome.R;
 import com.example.hotumit.monthlyincome.activity.ActivityChoose;
-import com.example.hotumit.monthlyincome.dao.PhotoItemDao;
 
 import com.example.hotumit.monthlyincome.dao.SeparateItemIncomeDao;
 import com.example.hotumit.monthlyincome.dao.SumIncomeCollectionDao;

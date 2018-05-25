@@ -1,10 +1,5 @@
-package com.example.hotumit.monthlyincome.Utility;
+package com.example.hotumit.monthlyincome.utility;
 
-
-import android.view.View;
-
-import com.example.hotumit.monthlyincome.dao.MenuItemDao;
-import com.example.hotumit.monthlyincome.dao.PhotoItemDao;
 
 public interface RecyclerItemClickListener {
    /* void onItemClick(PhotoItemDao notice);

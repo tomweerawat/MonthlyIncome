@@ -8,8 +8,8 @@ import android.widget.Toast
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.example.hotumit.monthlyincome.R
-import com.example.hotumit.monthlyincome.Utility.BaseActivity
-import com.example.hotumit.monthlyincome.Utility.Contextor
+import com.example.hotumit.monthlyincome.utility.BaseActivity
+import com.example.hotumit.monthlyincome.utility.Contextor
 import com.example.hotumit.monthlyincome.dao.NewCustItemCollectionDao
 import com.example.hotumit.monthlyincome.fragment.FragmentCust
 import com.example.hotumit.monthlyincome.manager.singleton.HttpManager

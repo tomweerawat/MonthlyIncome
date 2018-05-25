@@ -4,9 +4,9 @@ import android.graphics.Color
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.example.hotumit.monthlyincome.Utility.RecyclerItemClickListener
+import com.example.hotumit.monthlyincome.utility.RecyclerItemClickListener
 import com.example.hotumit.monthlyincome.R
-import com.example.hotumit.monthlyincome.Utility.ClickListener
+import com.example.hotumit.monthlyincome.utility.ClickListener
 import com.example.hotumit.monthlyincome.dao.MenuItemDao
 import com.example.hotumit.monthlyincome.dao.dummy.ImageDummyData
 import com.squareup.picasso.Picasso

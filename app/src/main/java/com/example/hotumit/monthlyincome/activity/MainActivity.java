@@ -11,7 +11,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -19,10 +18,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hotumit.monthlyincome.R;
-import com.example.hotumit.monthlyincome.Utility.BaseActivity;
+import com.example.hotumit.monthlyincome.utility.BaseActivity;
 
 import com.example.hotumit.monthlyincome.adapter.ViewPagerAdapter;
-import com.example.hotumit.monthlyincome.dao.SeparateItemIncomeDao;
 import com.example.hotumit.monthlyincome.dao.SeperateCollectionDao;
 import com.example.hotumit.monthlyincome.dao.SumIncomeCollectionDao;
 import com.example.hotumit.monthlyincome.fragment.SeperateIncomeFragment;

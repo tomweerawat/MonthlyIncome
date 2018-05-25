@@ -2,25 +2,17 @@ package com.example.hotumit.monthlyincome.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.hotumit.monthlyincome.R;
-import com.example.hotumit.monthlyincome.Utility.BaseActivity;
-import com.example.hotumit.monthlyincome.Utility.Contextor;
-import com.example.hotumit.monthlyincome.Utility.RecyclerItemClickListener;
-import com.example.hotumit.monthlyincome.activity.ActivityChoose;
+import com.example.hotumit.monthlyincome.utility.BaseActivity;
+import com.example.hotumit.monthlyincome.utility.Contextor;
+import com.example.hotumit.monthlyincome.utility.RecyclerItemClickListener;
 import com.example.hotumit.monthlyincome.dao.NewCustItemCollectionDao;
-import com.example.hotumit.monthlyincome.dao.PhotoItemDao;
-import com.example.hotumit.mykotlin.adapter.InfoAdapter;
 import com.example.hotumit.mykotlin.adapter.NewCusAdapter;
 
 import jp.wasabeef.recyclerview.animators.SlideInLeftAnimator;

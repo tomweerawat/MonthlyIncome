@@ -2,7 +2,7 @@ package com.example.hotumit.monthlyincome.manager.singleton;
 
 import android.content.Context;
 
-import com.example.hotumit.monthlyincome.Utility.Contextor;
+import com.example.hotumit.monthlyincome.utility.Contextor;
 import com.example.hotumit.monthlyincome.constants.Constanst;
 import com.example.hotumit.monthlyincome.manager.http.ApiService;
 import com.google.gson.Gson;

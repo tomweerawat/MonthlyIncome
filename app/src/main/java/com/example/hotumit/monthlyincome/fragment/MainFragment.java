@@ -11,15 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-import com.example.hotumit.monthlyincome.Utility.RecyclerItemClickListener;
+import com.example.hotumit.monthlyincome.utility.RecyclerItemClickListener;
 import com.example.hotumit.monthlyincome.R;
-import com.example.hotumit.monthlyincome.dao.PhotoItemCollectionDao;
 import com.example.hotumit.monthlyincome.dao.PhotoItemDao;
-import com.example.hotumit.monthlyincome.manager.singleton.HttpManager;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainFragment extends Fragment {
 

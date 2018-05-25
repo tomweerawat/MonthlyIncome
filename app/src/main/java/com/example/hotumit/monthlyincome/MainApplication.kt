@@ -1,8 +1,10 @@
 package com.example.hotumit.monthlyincome
 
 import android.app.Application
+import android.content.Context
+import android.support.multidex.MultiDex
 
-import com.example.hotumit.monthlyincome.Utility.Contextor
+import com.example.hotumit.monthlyincome.utility.Contextor
 
 
 /**
@@ -17,4 +19,9 @@ class MainApplication : Application() {
         Contextor.getInstance().init(applicationContext)
 
     }
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
+    }
+
 }

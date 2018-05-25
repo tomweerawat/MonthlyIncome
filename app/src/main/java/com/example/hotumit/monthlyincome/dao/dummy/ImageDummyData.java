@@ -13,7 +13,7 @@ public final class ImageDummyData {
         List<Integer> list = new ArrayList<>();
         list.add(R.drawable.book);
         list.add(R.drawable.money);
-        list.add(R.drawable.bag);
+        list.add(R.drawable.calendar);
         list.add(R.drawable.cloud);
 
         return list;

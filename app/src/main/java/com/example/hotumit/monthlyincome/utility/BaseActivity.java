@@ -1,4 +1,4 @@
-package com.example.hotumit.monthlyincome.Utility;
+package com.example.hotumit.monthlyincome.utility;
 
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;

@@ -2,27 +2,24 @@ package com.example.hotumit.monthlyincome.activity
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import com.example.hotumit.monthlyincome.R
-import com.example.hotumit.monthlyincome.R.drawable.t
-import com.example.hotumit.monthlyincome.R.id.*
-import com.example.hotumit.monthlyincome.Utility.BaseActivity
-import com.example.hotumit.monthlyincome.Utility.ClickListener
-import com.example.hotumit.monthlyincome.Utility.Contextor
-import com.example.hotumit.monthlyincome.Utility.RecyclerItemClickListener
+import com.example.hotumit.monthlyincome.R.id.etxt
+import com.example.hotumit.monthlyincome.R.id.income
+import com.example.hotumit.monthlyincome.utility.BaseActivity
+import com.example.hotumit.monthlyincome.utility.ClickListener
+import com.example.hotumit.monthlyincome.utility.Contextor
+import com.example.hotumit.monthlyincome.utility.RecyclerItemClickListener
 import com.example.hotumit.monthlyincome.constants.Constanst
-import com.example.hotumit.monthlyincome.dao.PhotoItemDao
+import com.example.hotumit.monthlyincome.dao.dummy.ImageDummyData
 import com.example.hotumit.monthlyincome.dao.dummy.MenuGenerator
 import com.example.hotumit.mykotlin.adapter.MenuAdapter
-import com.example.hotumit.mykotlin.adapter.NewCusAdapter
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.layout_item_menu.view.*
 import kotlinx.android.synthetic.main.layout_menu.*
 import kotlinx.android.synthetic.main.layout_selectmenu.*
 
@@ -38,10 +35,19 @@ class HomeMenu : BaseActivity(), ClickListener {
         initview()
 
         var pref = getSharedPreferences("userdata", Context.MODE_PRIVATE)
-        Log.e("Test", "Test" + pref.getString(Constanst.EMAIL, ""))
+        Log.e("MyImage", "MyImage" + pref.getString(Constanst.USERIMAGE, ""))
         etxt.text = pref.getString(Constanst.EMAIL, "")
-
+        Picasso.with(Contextor.getInstance().context)
+                .load(pref.getString(Constanst.USERIMAGE,""))
+                .centerCrop()
+                .resize(240, 240)
+                .into(profile_image)
+        profile_image.setOnClickListener {
+            startActivity(Intent(this@HomeMenu, ActivityProfile::class.java))
+        }
     }
+
+
 
     private fun initview() {
         recyclerView = findViewById(R.id.rvAndroidVersion) as RecyclerView

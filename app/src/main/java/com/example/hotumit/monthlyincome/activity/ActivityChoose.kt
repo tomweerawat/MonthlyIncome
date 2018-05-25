@@ -9,8 +9,8 @@ import android.widget.Toast
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.example.hotumit.monthlyincome.R
-import com.example.hotumit.monthlyincome.Utility.BaseActivity
-import com.example.hotumit.monthlyincome.Utility.Contextor
+import com.example.hotumit.monthlyincome.utility.BaseActivity
+import com.example.hotumit.monthlyincome.utility.Contextor
 import com.example.hotumit.monthlyincome.dao.SeperateCollectionDao
 import com.example.hotumit.monthlyincome.dao.SumIncomeCollectionDao
 import com.example.hotumit.monthlyincome.manager.singleton.HttpManager

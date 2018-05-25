@@ -35,6 +35,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:maxLength="10"
+            android:inputType="date"
             android:layout_marginStart="@dimen/activity_vertical_margin"
             android:hint="2018-03-1" />
 
@@ -43,6 +45,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:inputType="date"
+            android:maxLength="10"
             android:layout_marginStart="@dimen/activity_vertical_margin"
             android:hint="2018-03-1" />
 

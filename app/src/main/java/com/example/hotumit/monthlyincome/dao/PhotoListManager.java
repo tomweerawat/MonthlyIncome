@@ -3,7 +3,7 @@ package com.example.hotumit.monthlyincome.dao;
 import android.content.Context;
 
 
-import com.example.hotumit.monthlyincome.Utility.Contextor;
+import com.example.hotumit.monthlyincome.utility.Contextor;
 
 import java.util.ArrayList;
 

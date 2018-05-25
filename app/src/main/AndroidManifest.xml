@@ -23,13 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Utility.BaseActivity" />
+        <activity android:name=".utility.BaseActivity" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.DatePickerActivity"/>
         <activity android:name=".activity.ActivityChoose"/>
         <activity android:name=".activity.HomeMenu"/>
         <activity android:name=".activity.ActivityNewCus"/>
         <activity android:name=".fragment.FragmentCust"/>
+        <activity android:name=".activity.ActivityProfile"/>
     </application>
 
 </manifest>
