@@ -1,4 +1,4 @@
-package com.example.hotumit.monthlyincome.activity;
+package com.example.hotumit.monthlyincome.activity.java;
 
 import android.app.Fragment;
 import android.os.Bundle;

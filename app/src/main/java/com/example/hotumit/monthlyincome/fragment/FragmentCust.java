@@ -6,20 +6,25 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 
 import com.example.hotumit.monthlyincome.R;
+import com.example.hotumit.monthlyincome.activity.ActivityNewCus;
+import com.example.hotumit.monthlyincome.dao.dummy.NewCustDummyItemDao;
 import com.example.hotumit.monthlyincome.utility.BaseActivity;
 import com.example.hotumit.monthlyincome.utility.Contextor;
 import com.example.hotumit.monthlyincome.utility.RecyclerItemClickListener;
 import com.example.hotumit.monthlyincome.dao.NewCustItemCollectionDao;
 import com.example.hotumit.mykotlin.adapter.NewCusAdapter;
+import com.google.gson.GsonBuilder;
 
 import jp.wasabeef.recyclerview.animators.SlideInLeftAnimator;
 
 public class FragmentCust extends BaseActivity {
     private RecyclerView recyclerView;
-    NewCustItemCollectionDao dao;
+   /* NewCustItemCollectionDao dao;*/
+    NewCustDummyItemDao dao;
     NewCusAdapter newcust;
     SwipeRefreshLayout swipeRefreshLayout;
 /*
@@ -44,6 +49,7 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 
     private void getDataDao() {
         dao = getIntent().getParcelableExtra("dao");
+        Log.e("MyNewCust", "MyNewCust" +  new GsonBuilder().setPrettyPrinting().create().toJson(dao));
     }
 
     private void initInstances() {

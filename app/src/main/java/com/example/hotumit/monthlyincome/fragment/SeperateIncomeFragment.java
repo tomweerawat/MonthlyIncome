@@ -64,12 +64,7 @@ public class SeperateIncomeFragment extends Fragment {
         @Override
         public void onItemClick() {
 
-          /*  Toast.makeText(MainActivity.this,
-                    "List title:  " + notice.getCamera(),
-                    Toast.LENGTH_LONG).show();*/
-        /*    Intent i = new Intent(MainActivity.this, MoreinfoActivity.class);
-            i.putExtra("dao", notice);
-            startActivity(i);*/
+
 
         }
     };

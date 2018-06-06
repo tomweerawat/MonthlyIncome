@@ -10,5 +10,5 @@ public class Constanst {
     public static final String USERIMAGE = "userimage";
     public static final String UNIQUE_ID = "unique_id";
     public static final String Base_Url = "https://nuuneoi.com/courses/500px/";
-    public static final String Base_Income_Url = "http://192.168.1.108:8080/MonthlyWeb/";
+    public static final String Base_Income_Url = "http://192.168.1.118:8080/MonthlyWeb/";
 }

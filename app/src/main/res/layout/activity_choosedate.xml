@@ -33,6 +33,8 @@
             android:layout_marginStart="@dimen/marginleft"
             android:layout_marginEnd="@dimen/marginright"
             android:layout_marginBottom="@dimen/marginbottom"
+            android:maxLength="10"
+            android:inputType="date"
             android:id="@+id/startdate"
             android:hint="2018-03-01"/>
 
@@ -44,7 +46,9 @@
             android:layout_marginTop="@dimen/margintop"
             android:layout_marginStart="@dimen/marginleft"
             android:layout_marginEnd="@dimen/marginright"
-            android:layout_marginBottom="@dimen/marginbottom"/>
+            android:layout_marginBottom="@dimen/marginbottom"
+            android:maxLength="10"
+            android:inputType="date"/>
 
         <EditText
             android:layout_width="match_parent"

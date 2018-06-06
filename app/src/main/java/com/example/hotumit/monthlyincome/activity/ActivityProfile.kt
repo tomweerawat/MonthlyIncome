@@ -15,9 +15,16 @@ import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.layout_menu.*
+import android.R.id.edit
+import com.google.android.gms.flags.impl.SharedPreferencesFactory.getSharedPreferences
+import android.content.SharedPreferences
+import android.widget.Toast
+import com.example.hotumit.monthlyincome.activity.LoginActivity.Companion.mGoogleApiClient
+import com.facebook.login.Login
+
 
 class ActivityProfile : BaseActivity() {
-    var mGoogleApiClient: GoogleApiClient? = null
+
     var mAuth: FirebaseAuth? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +41,7 @@ class ActivityProfile : BaseActivity() {
         inittoolbar()
         profsignout.setOnClickListener {
             signOut()
-            startActivity(Intent(this@ActivityProfile, LoginActivity::class.java))
+           /* startActivity(Intent(this@ActivityProfile, LoginActivity::class.java))*/
         }
 
     }
@@ -52,7 +59,15 @@ class ActivityProfile : BaseActivity() {
     private fun signOut() {
 
 
+     /*   FirebaseAuth.getInstance().signOut()*/
+        val settings = Contextor.getInstance().context.getSharedPreferences("PreferencesName", Context.MODE_PRIVATE)
+        settings.edit().clear().commit()
+
+        Log.e("setting","setting"+settings)
+       /* LoginActivity.mAuth!!.signOut()*/
         FirebaseAuth.getInstance().signOut()
+        startActivity(Intent(this@ActivityProfile, LoginActivity::class.java))
+
 
 
     }

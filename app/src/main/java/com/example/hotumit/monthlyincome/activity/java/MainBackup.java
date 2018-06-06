@@ -1,4 +1,4 @@
-package com.example.hotumit.monthlyincome.activity;
+package com.example.hotumit.monthlyincome.activity.java;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hotumit.monthlyincome.R;
+import com.example.hotumit.monthlyincome.activity.LoginActivity;
 import com.example.hotumit.monthlyincome.utility.BaseActivity;
 
 import com.example.hotumit.monthlyincome.adapter.ViewPagerAdapter;
@@ -28,7 +29,7 @@ import com.example.hotumit.monthlyincome.fragment.SumncomeFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class MainActivity extends BaseActivity {
+public class MainBackup extends BaseActivity {
     Context c;
     TextView tv, tvfirebase;
     SharedPreferences pref;
@@ -84,7 +85,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                Intent i = new Intent(MainBackup.this, LoginActivity.class);
                 startActivity(i);
             }
         });
@@ -105,7 +106,7 @@ public class MainActivity extends BaseActivity {
         drawerLayout = findViewById(R.id.drawerLayout);
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(
-                MainActivity.this,
+                MainBackup.this,
                 drawerLayout,
                 R.string.open_drawer,
                 R.string.close_drawer

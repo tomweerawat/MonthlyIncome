@@ -30,6 +30,7 @@ object HttpManager {
 
         val gson = GsonBuilder()
                 .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
+                .setPrettyPrinting()
                 .create()
         val retrofit = Retrofit.Builder()
                 .client(client)

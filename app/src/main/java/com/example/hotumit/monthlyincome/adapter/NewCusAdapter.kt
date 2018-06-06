@@ -7,8 +7,17 @@ import com.example.hotumit.monthlyincome.utility.RecyclerItemClickListener
 import com.example.hotumit.monthlyincome.R
 import com.example.hotumit.monthlyincome.adapter.holder.NewCusViewHolder
 import com.example.hotumit.monthlyincome.dao.NewCustItemCollectionDao
+import kotlinx.android.synthetic.main.nav_header_main.*
+import android.R.array
+import android.util.Log
+import android.widget.Toast
+import com.example.hotumit.monthlyincome.dao.dummy.NewCustDummyItemDao
+import com.example.hotumit.monthlyincome.dao.dummy.Newcus
+import com.example.hotumit.monthlyincome.utility.Contextor
+import com.google.gson.GsonBuilder
 
-class NewCusAdapter(private val androidList: NewCustItemCollectionDao?, recyclerItemClickListener: RecyclerItemClickListener) : RecyclerView.Adapter<NewCusViewHolder>() {
+
+class NewCusAdapter(private val androidList: NewCustDummyItemDao, recyclerItemClickListener: RecyclerItemClickListener) : RecyclerView.Adapter<NewCusViewHolder>() {
     override fun getItemCount(): Int {
         return androidList?.newcuss?.size ?: 0
     }
@@ -18,17 +27,14 @@ class NewCusAdapter(private val androidList: NewCustItemCollectionDao?, recycler
     }
 
     override fun onBindViewHolder(holder: NewCusViewHolder, position: Int) {
+
         holder?.let {
             val android = androidList?.newcuss?.get(position)
+
             val unknownInfo = it.itemView?.context?.getString(R.string.unknown) ?: "Unknown"
             it.motnth(android?.month ?: unknownInfo)
-            it.gender(android?.gender ?: unknownInfo)
-            it.newreg(android?.newregister ?: unknownInfo)
+            it.gender(android?.totalofmale ?:unknownInfo)
+            it.newreg(android?.totaloffemale?:unknownInfo)
 
-
-
-        }
-    }
-
-
+        }}
 }

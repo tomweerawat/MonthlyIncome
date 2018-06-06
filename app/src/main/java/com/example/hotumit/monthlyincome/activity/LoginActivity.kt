@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.example.hotumit.monthlyincome.utility.BaseActivity
 import com.example.hotumit.monthlyincome.constants.Constanst
 import com.example.hotumit.monthlyincome.R
+import com.example.hotumit.monthlyincome.activity.LoginActivity.Companion.mGoogleApiClient
 import com.example.hotumit.monthlyincome.utility.Contextor
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -23,13 +24,16 @@ import org.jetbrains.anko.toast
 
 class LoginActivity : BaseActivity(), GoogleApiClient.OnConnectionFailedListener {
 
-    var mAuth: FirebaseAuth? = null
+
     private val TAG: String = "Login Activity"
     private lateinit var pref: SharedPreferences;
     private var mAuthListener: FirebaseAuth.AuthStateListener? = null
     private val REQUEST_CODE_SIGN_IN = 9001
     val GOOGLE_LOG_IN_RC = 1
-    var mGoogleApiClient: GoogleApiClient? = null
+    companion object {
+        var mGoogleApiClient: GoogleApiClient? = null
+        var mAuth: FirebaseAuth? = null
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -188,9 +192,6 @@ class LoginActivity : BaseActivity(), GoogleApiClient.OnConnectionFailedListener
 
         // sign out Google
         Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback { }
-
-    }
-    companion object {
 
     }
 
