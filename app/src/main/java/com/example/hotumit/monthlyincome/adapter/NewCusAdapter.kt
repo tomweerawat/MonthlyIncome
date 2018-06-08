@@ -17,7 +17,7 @@ import com.example.hotumit.monthlyincome.utility.Contextor
 import com.google.gson.GsonBuilder
 
 
-class NewCusAdapter(private val androidList: NewCustDummyItemDao, recyclerItemClickListener: RecyclerItemClickListener) : RecyclerView.Adapter<NewCusViewHolder>() {
+class NewCusAdapter(private val androidList: NewCustItemCollectionDao, recyclerItemClickListener: RecyclerItemClickListener) : RecyclerView.Adapter<NewCusViewHolder>() {
     override fun getItemCount(): Int {
         return androidList?.newcuss?.size ?: 0
     }
@@ -33,8 +33,8 @@ class NewCusAdapter(private val androidList: NewCustDummyItemDao, recyclerItemCl
 
             val unknownInfo = it.itemView?.context?.getString(R.string.unknown) ?: "Unknown"
             it.motnth(android?.month ?: unknownInfo)
-            it.gender(android?.totalofmale ?:unknownInfo)
-            it.newreg(android?.totaloffemale?:unknownInfo)
+            it.gender(android?.gender ?:unknownInfo)
+            it.newreg(android?.newregister?:unknownInfo)
 
         }}
 }

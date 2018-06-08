@@ -27,6 +27,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
+import kotlin.collections.ArrayList
 
 class ActivityNewCus : BaseActivity() {
 
@@ -35,7 +36,12 @@ class ActivityNewCus : BaseActivity() {
     var totalmale: String = ""
     var totalfemale: String = ""
     var month: String = ""
+    private val TAG = "MyActivity"
     lateinit var newcust: NewCustDummyItemDao
+    /*     val users: MutableList<Newcus>? = null
+*/
+ val users : MutableList<Newcus> = ArrayList()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_newcus)
@@ -76,10 +82,10 @@ class ActivityNewCus : BaseActivity() {
     }
 
     private fun inittoolbar() {
-        val toolbar = findViewById(R.id.toolBarr) as Toolbar
+        val toolbar = findViewById<Toolbar>(R.id.toolBarr)
         setSupportActionBar(toolbar)
-        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
-        getSupportActionBar()?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
         toolbar.setNavigationOnClickListener {
             finish()
         }
@@ -92,36 +98,33 @@ class ActivityNewCus : BaseActivity() {
 
             override fun onResponse(call: Call<NewCustItemCollectionDao?>?, response: Response<NewCustItemCollectionDao?>?) {
                 val dao = response?.body()
+                Log.e(TAG, "Mydata" + GsonBuilder().setPrettyPrinting().create().toJson(dao))
 
+            /*    for (item in dao!!.newcuss) {
 
-                for (item in dao!!.newcuss) {
-
-
-
-
-                    Log.e("Hello", "Hello" + GsonBuilder().setPrettyPrinting().create().toJson(month))
                     month = item.month
-           /*      if (item.gender.equals("M")) {
+
+
+
+
+                    if (item.gender.equals("M")) {
                         totalmale = item.newregister
 
-
-
-
                     } else if (item.gender.equals("F")) {
-
                         totalfemale = item.newregister
-                    }*/
 
-
+                    }
+                    users.add(Newcus(month, totalmale, totalfemale))
                 }
 
-                val users: List<Newcus> = listOf(Newcus(month, totalmale, totalfemale))
-                newcust= NewCustDummyItemDao(users)
+                newcust= NewCustDummyItemDao(users as ArrayList<Newcus>)
+                Log.e(TAG, "Mydata" + GsonBuilder().setPrettyPrinting().create().toJson(newcust))*/
 
-                for (i in newcust!!.newcuss.indices){
-                    Log.e("TOMTOM", "TOMTOM" + GsonBuilder().setPrettyPrinting().create().toJson(newcust.newcuss[i].month))
-                }
-            /*    gotoActivity(newcust)*/
+
+
+
+
+                gotoActivity(dao)
 
 
 
@@ -135,45 +138,19 @@ class ActivityNewCus : BaseActivity() {
         })
     }
 
-    private fun gotoActivity(newcust: NewCustDummyItemDao) {
-        showProgressDialog()
-        val i = Intent(this, FragmentCust::class.java)
-        i.putExtra("dao", newcust)
-        startActivity(i)
-    }
-
-
-/*
-    companion object {
-        var totalmale: String = ""
-        var totalfemale: String = ""
-        var month: String = ""
-        fun createAndroidVersionInfo(): MutableList<Newcus> {
-            return arrayListOf(
-                    Newcus(month, totalmale, totalfemale)
-
-            )
-        }
-    }
-*/
-
-
-/*
-    private fun gotoactivity() {
+    private fun gotoActivity(dao: NewCustItemCollectionDao?) {
         showProgressDialog()
         val i = Intent(this, FragmentCust::class.java)
         i.putExtra("dao", dao)
         startActivity(i)
-
     }
-*/
 
-
-    /*  fun createAndroidVersionInfo(): MutableList<Newcus> {
-          return arrayListOf(
-                  Newcus(month, totalmale, totalfemale)
-
-          )
+    /*  private fun gotoActivity(newcust: NewCustDummyItemDao) {
+          showProgressDialog()
+          val i = Intent(this, FragmentCust::class.java)
+          i.putExtra("dao", newcust)
+          startActivity(i)
       }*/
+
 
 }

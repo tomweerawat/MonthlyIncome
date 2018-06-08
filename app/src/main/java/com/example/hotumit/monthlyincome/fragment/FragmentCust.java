@@ -24,7 +24,7 @@ import jp.wasabeef.recyclerview.animators.SlideInLeftAnimator;
 public class FragmentCust extends BaseActivity {
     private RecyclerView recyclerView;
    /* NewCustItemCollectionDao dao;*/
-    NewCustDummyItemDao dao;
+    NewCustItemCollectionDao dao;
     NewCusAdapter newcust;
     SwipeRefreshLayout swipeRefreshLayout;
 /*

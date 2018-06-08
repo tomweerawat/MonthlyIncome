@@ -1,13 +1,13 @@
-package com.example.hotumit.monthlyincome.dao
+package com.example.hotumit.monthlyincome.dao.dummy
 
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
-data class NewCustItemDao(
+data class NewCustItemDaoTest(
         @SerializedName("month") val month: String,
-        @SerializedName("totalmale") val gender: String,
-        @SerializedName("totalfemale") val newregister: String
+        @SerializedName("gender") val gender: String,
+        @SerializedName("newregister") val newregister: String
 ) : Parcelable {
     constructor(source: Parcel) : this(
             source.readString(),
@@ -25,9 +25,9 @@ data class NewCustItemDao(
 
     companion object {
         @JvmField
-        val CREATOR: Parcelable.Creator<NewCustItemDao> = object : Parcelable.Creator<NewCustItemDao> {
-            override fun createFromParcel(source: Parcel): NewCustItemDao = NewCustItemDao(source)
-            override fun newArray(size: Int): Array<NewCustItemDao?> = arrayOfNulls(size)
+        val CREATOR: Parcelable.Creator<NewCustItemDaoTest> = object : Parcelable.Creator<NewCustItemDaoTest> {
+            override fun createFromParcel(source: Parcel): NewCustItemDaoTest = NewCustItemDaoTest(source)
+            override fun newArray(size: Int): Array<NewCustItemDaoTest?> = arrayOfNulls(size)
         }
     }
 }
