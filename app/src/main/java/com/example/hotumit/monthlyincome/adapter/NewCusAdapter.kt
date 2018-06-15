@@ -10,7 +10,9 @@ import com.example.hotumit.monthlyincome.dao.NewCustItemCollectionDao
 import kotlinx.android.synthetic.main.nav_header_main.*
 import android.R.array
 import android.util.Log
+import android.view.View
 import android.widget.Toast
+import com.example.hotumit.monthlyincome.constants.PostType
 import com.example.hotumit.monthlyincome.dao.dummy.NewCustDummyItemDao
 import com.example.hotumit.monthlyincome.dao.dummy.Newcus
 import com.example.hotumit.monthlyincome.utility.Contextor
@@ -23,10 +25,40 @@ class NewCusAdapter(private val androidList: NewCustItemCollectionDao, recyclerI
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewCusViewHolder {
-        return NewCusViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.newcus_view_row, parent, false))
+        Log.e("viewType", "viewType" + viewType)
+
+        val viewHolder: NewCusViewHolder = when (viewType) {
+        PostType.PHOTO -> NewCusViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.newcus_view_row, parent, false))
+
+            else ->NewCusViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.newcus_view_row, parent, false))
+
+        }
+
+
+       /* return NewCusViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.newcus_view_row, parent, false))*/
+        return viewHolder
     }
 
     override fun onBindViewHolder(holder: NewCusViewHolder, position: Int) {
+
+
+
+
+        if (position > 0){
+            holder.itemView.setVisibility(View.GONE);
+        }/*else{
+           val inBounds = position >= 0 && position < androidList.newcuss.size
+            holder.motnth(androidList.newcuss[position].month)
+            holder.gender(androidList.newcuss[position].gender)
+            holder.newreg(androidList.newcuss[position].newregister)
+            holder.motnth1(androidList.newcuss[position].month)
+            holder.gender1(androidList.newcuss[position].gender)
+            holder.newreg1(androidList.newcuss[position].newregister)
+            Log.e("BBBB", "BBBB" + GsonBuilder().setPrettyPrinting().create().toJson(androidList.newcuss[position].month)[position])
+        }*/
+
+
+
 
         holder?.let {
             val android = androidList?.newcuss?.get(position)
@@ -36,5 +68,9 @@ class NewCusAdapter(private val androidList: NewCustItemCollectionDao, recyclerI
             it.gender(android?.gender ?:unknownInfo)
             it.newreg(android?.newregister?:unknownInfo)
 
-        }}
+        }
+
+    }
+
+
 }

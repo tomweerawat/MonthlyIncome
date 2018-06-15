@@ -5,7 +5,7 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class NewCustItemCollectionDao(
-        @SerializedName("newcuss") val newcuss: List<NewCustItemDao>
+        @SerializedName("newcuss") val newcuss: ArrayList<NewCustItemDao>
 ) : Parcelable {
     constructor(source: Parcel) : this(
             source.createTypedArrayList(NewCustItemDao.CREATOR)

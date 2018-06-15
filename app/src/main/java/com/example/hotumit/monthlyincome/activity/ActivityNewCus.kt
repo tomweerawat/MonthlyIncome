@@ -1,32 +1,25 @@
 package com.example.hotumit.monthlyincome.activity
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.widget.Toast
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.example.hotumit.monthlyincome.R
-import com.example.hotumit.monthlyincome.R.id.*
 import com.example.hotumit.monthlyincome.utility.BaseActivity
 import com.example.hotumit.monthlyincome.utility.Contextor
 import com.example.hotumit.monthlyincome.dao.NewCustItemCollectionDao
-import com.example.hotumit.monthlyincome.dao.NewCustItemDao
-import com.example.hotumit.monthlyincome.dao.SeperateCollectionDao
 import com.example.hotumit.monthlyincome.dao.dummy.NewCustDummyItemDao
 import com.example.hotumit.monthlyincome.dao.dummy.Newcus
 import com.example.hotumit.monthlyincome.fragment.FragmentCust
 import com.example.hotumit.monthlyincome.manager.singleton.HttpManager
 import com.google.gson.GsonBuilder
 import kotlinx.android.synthetic.main.activity_newcus.*
-import org.jetbrains.anko.Android
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.util.*
 import kotlin.collections.ArrayList
 
 class ActivityNewCus : BaseActivity() {

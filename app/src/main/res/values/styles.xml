@@ -45,7 +45,15 @@
         <item name="android:textSize">@dimen/text_title</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="TextView" />
+
+    <style name="TextView.Content">
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+    <style name="TextView.SubContent">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
 </resources>

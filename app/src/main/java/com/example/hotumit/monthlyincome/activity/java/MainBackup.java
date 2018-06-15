@@ -140,8 +140,8 @@ public class MainBackup extends BaseActivity {
     public void setupViewPager(ViewPager upViewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         /*adapter.addFragment(new MainFragment(), "");*/
-        adapter.addFragment(SumncomeFragment.newInstance(sumIncomeCollectionDao), "");
-        adapter.addFragment(SeperateIncomeFragment.newInstance(dao), "");
+        adapter.addFragment(SumncomeFragment.Companion.newInstance(sumIncomeCollectionDao), "");
+        adapter.addFragment(SeperateIncomeFragment.Companion.newInstance(dao), "");
         viewPager.setAdapter(adapter);
     }
 
