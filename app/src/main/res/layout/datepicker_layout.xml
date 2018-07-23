@@ -1,13 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+    <!--    <Button
+            android:id="@+id/date_button"
+            and  roid:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:theme="@style/AppTheme"
+            android:text="Pick Date"/>-->
+    <!--
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            app:abbreviationsBarColor="#303F9F"
+            app:abbreviationsLabelsColor="@android:color/white"
+            app:anotherMonthsDaysLabelsColor="#3F51B5"
+            app:daysLabelsColor="@android:color/white"
+            app:headerColor="#1A237E"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pagesColor="#3F51B5"
+            app:selectionColor="@android:color/white"
+            app:selectionLabelColor="#3F51B5"
+            app:todayLabelColor="#AEEA00"
+            app:type="many_days_picker" />
+    -->
+
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:abbreviationsBarColor="#303F9F"
+            app:abbreviationsLabelsColor="@android:color/white"
+            app:anotherMonthsDaysLabelsColor="#3F51B5"
+            app:daysLabelsColor="@android:color/white"
+            app:headerColor="#1A237E"
+            app:pagesColor="#3F51B5"
+            app:selectionColor="@android:color/white"
+            app:selectionLabelColor="#3F51B5"
+            app:todayLabelColor="#AEEA00"
+            app:type="many_days_picker" />
+
     <Button
         android:id="@+id/date_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:theme="@style/AppTheme"
-        android:text="Pick Date"/>
-</RelativeLayout>
+        android:layout_gravity="center"
+        android:text="Pick Date"
+        android:theme="@style/AppTheme" />
+
+<!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/emailedt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="it@hotum.co.th" />
+
+    </LinearLayout>-->
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/emailedt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="it@hotum.co.th" />
+        <Button
+            android:id="@+id/date_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="Pick Date"
+            android:theme="@style/AppTheme" />
+
+    </LinearLayout>-->
+</LinearLayout>

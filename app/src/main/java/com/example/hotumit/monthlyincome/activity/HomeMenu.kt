@@ -10,6 +10,8 @@ import android.view.View
 import com.example.hotumit.monthlyincome.R
 import com.example.hotumit.monthlyincome.R.id.etxt
 import com.example.hotumit.monthlyincome.R.id.income
+import com.example.hotumit.monthlyincome.activity.java.DatePicker
+import com.example.hotumit.monthlyincome.activity.java.DatePickerActivity
 import com.example.hotumit.monthlyincome.utility.BaseActivity
 import com.example.hotumit.monthlyincome.utility.ClickListener
 import com.example.hotumit.monthlyincome.utility.Contextor
@@ -63,8 +65,11 @@ class HomeMenu : BaseActivity(), ClickListener {
     override fun itemClicked(view: View?, position: Int) {
         if (position == 0) {
             startActivity(Intent(this@HomeMenu, ActivityNewCus::class.java))
-        } else {
+        }
+        else if (position == 1) {
             startActivity(Intent(this@HomeMenu, ActivityChoose::class.java))
+        }else{
+            startActivity(Intent(this@HomeMenu, DatePicker::class.java))
         }
     }
 

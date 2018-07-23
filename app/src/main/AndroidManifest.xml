@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.LoginActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,13 +25,14 @@
         </activity>
         <activity android:name=".utility.BaseActivity" />
         <activity android:name=".activity.java.MainBackup" />
-        <activity android:name=".activity.java.DatePickerActivity"/>
+        <activity android:name=".activity.java.DatePicker"/>
         <activity android:name=".activity.ActivityChoose"/>
         <activity android:name=".activity.HomeMenu"/>
         <activity android:name=".activity.ActivityNewCus"/>
         <activity android:name=".fragment.FragmentCust"/>
         <activity android:name=".activity.ActivityProfile"/>
         <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
     </application>
 
 </manifest>
