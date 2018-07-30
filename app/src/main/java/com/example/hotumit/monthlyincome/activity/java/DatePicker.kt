@@ -44,6 +44,7 @@ class DatePicker : BaseActivity(), OnSelectDateListener {
 
     private fun inittoolbar() {
         val toolbar = findViewById<Toolbar>(R.id.toolBarr)
+        toolbar.setTitle("NewCustomer")
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
